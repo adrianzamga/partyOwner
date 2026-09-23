@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,500;0,700;0,900;1,400&family=Poppins:wght@300;400;600;900&display=swap');
+
+:root {
+    --main: #fffffe;
+    --stroke: #2b2c34;
+    --secundary: #d1d1e9;
+    --tertiary: #e45858;
+    --highlight: #6246ea;
+}
+
+body {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.form-main {
+    min-height: 110vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.form-content h3 {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--stroke);
+    font-weight: 600;
+}
+
+.form-content form {
+    margin: 25px 0 20px;
+}
+
+.form-content .input-box {
+    margin: 25px;
+}
+
+.form-content .input-control {
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--tertiary);
+    color: var(--stroke);
+    font-weight: inherit;
+    font-size: 16px;
+}
+
+::placeholder {
+    color: var(--stroke);
+}
+
+.form-content .input-control:focus {
+    outline: none;
+}
+
+.form-content .btn {
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    border-radius: 25px;
+    background: linear-gradient(to right, var(--tertiary), var(--highlight));
+    border: none;
+    color: var(--main);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.form-content .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    z-index: -1;
+}
+
+.form-content .btn:hover::before {
+    width: 100%;
+    background-color: var(--tertiary);
+}
+
+.form-content .box {
+    border-color: var(--tertiary);
+    border: 2px solid var(--tertiary);
+    padding: 40px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--stroke);
+    background-color: var(--secundary);
+    opacity: 90%;
+}
+
+.foto-div {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto_circular {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid none;
+    background-image: url(../assets/icons8-customer.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 1px solid var(--stroke);
+}
